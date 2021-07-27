@@ -50,7 +50,7 @@ class AuthController extends Controller
         ])->withCookie($cookie);
     }
 
-    public function getUsers(){
+    public function index(){
         return User::all();
     }
 }
