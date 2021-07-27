@@ -49,5 +49,9 @@ class AuthController extends Controller
             'message' => "Success"
         ])->withCookie($cookie);
     }
+
+    public function getUsers(){
+        return User::all();
+    }
 }
 
