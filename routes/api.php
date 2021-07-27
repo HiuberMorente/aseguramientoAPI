@@ -17,7 +17,7 @@
 
 Route::post('register', [AuthController::class, 'register']);
 Route::post('login', [AuthController::class, 'login']);
-Route::get('index', [AuthController::class, 'index']);
+Route::get('Users', [AuthController::class, 'Users']);
 
 
 Route::middleware('auth:sanctum')->group(function(){
