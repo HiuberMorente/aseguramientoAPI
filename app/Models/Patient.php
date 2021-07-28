@@ -10,7 +10,7 @@ class Patient extends Model
     use HasFactory;
 
     protected $fillable = [
-       'dpi',
+        'dpi',
         'primerNombre',
         'segundoNombre',
         'tercerNombre',
