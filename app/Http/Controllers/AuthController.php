@@ -20,7 +20,7 @@ class AuthController extends Controller
         ]);
     }
 
-    public function Rlogin(Request $request){
+    public function login(Request $request){
         if(!Auth::attempt($request->only('email', 'password'))){
             return response([
                 'message' =>'Invalid credentials!'
@@ -29,13 +29,13 @@ class AuthController extends Controller
 
         $user = Auth::user();
 
-        // $token= $user->createToken('token')->plainTextToken;
-
-        // $cookie = cookie('jwt', $token, 60 * 24); //1 day
+        $token= $user->createToken('token')->plainTextToken;
+        
+        $cookie = cookie('jwt', $token, 60 * 24); //1 day
 
         return response([
-            'message' => 'Success'
-        ], Response::HTTP_OK);
+            'message' => $token
+        ])->withCookie($cookie);
     }
 
     public function user(){
