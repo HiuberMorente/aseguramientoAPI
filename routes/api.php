@@ -32,5 +32,5 @@ Route::get('patient/{patient}', [PatientController::class, 'show']);
 Route::post('patient', [PatientController::class, 'store']);
 Route::patch('patient/{patient}', [PatientController::class, 'update']);
 Route::delete('patient/{patient}', [PatientController::class, 'delete']);
- 
+
 
