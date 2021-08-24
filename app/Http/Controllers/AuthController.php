@@ -34,8 +34,8 @@ class AuthController extends Controller
         // $cookie = cookie('jwt', $token, 60 * 24); //1 day
 
         return response([
-            'message' => Response::HTTP_OK
-        ]);
+            'message' => 'Success'
+        ], Response::HTTP_OK);
     }
 
     public function user(){
