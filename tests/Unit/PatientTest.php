@@ -15,6 +15,8 @@ class PatientTest extends TestCase
      */
     public function test_a_patient_has_data()
     {
+        $this -> withoutExceptionHandling();
+
         $this -> assertContains(1, Patient::all());
     }
 }
