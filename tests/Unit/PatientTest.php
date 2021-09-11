@@ -13,10 +13,21 @@ class PatientTest extends TestCase
      *
      * @return void
      */
-    public function test_a_patient_has_data()
-    {
+    // public function test_a_patient_has_data()
+    // {
+    //     $this -> withoutExceptionHandling();
+
+    //     $this -> assertCount(2, Patient::all());
+    // }
+
+
+    public function listOfPatients(){
         $this -> withoutExceptionHandling();
 
-        $this -> assertContains(1, Patient::all());
+        $response = $this -> get('/patient');
+
+        $response -> assertOk();
+
+
     }
 }
