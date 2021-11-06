@@ -35,4 +35,8 @@ class PatientController extends Controller
         return response()->json(null, Response::HTTP_NO_CONTENT);
     }
 
+    public function dude(Request $request){
+        return $request;
+    }
+
 }
